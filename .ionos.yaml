@@ -1,0 +1,11 @@
+version: 2
+build-steps:
+  - name: nodejs
+    buildTool:
+      - name: nodejs
+        version: 16.x
+    commands:
+    - npm ci
+    - npm run build
+deploy-step:
+  deployment-folder: ./dist/angular-starter
